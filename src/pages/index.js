@@ -7,11 +7,13 @@ const BlogPost = ({node}) => {
   return (
     <li>
       <Link to={node.slug}><h1>{node.title}</h1></Link>
+      <p>{node.summary}</p>
     </li>
   )
 }
 const IndexPage = ({data}) => (
   <Layout>
+    <h1>Latest Tangents</h1>
     <ul>
       {data.allContentfulBlog.edges.map((edge) => <BlogPost node={edge.node} key={edge.node.id}/>)}
     </ul>
@@ -32,6 +34,7 @@ export const pageQuery = graphql`
             title
             slug
             id
+            summary
           }
         }
       }

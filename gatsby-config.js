@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Genevieve Crow',
   },
   plugins: [
     {
@@ -23,6 +23,13 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    'gatsby-transformer-remark',
+    {
+     resolve: 'gatsby-plugin-typography',
+       options: {
+         pathToConfigModule: 'src/utils/typography',
+       },
+     },
   ]
 }
