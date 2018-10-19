@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 
 export default ({data}) => {
   const title = data.contentfulBlog.title
-  const content = data.contentfulBlog.content.childMarkdownRemark.html
+  const content = data.contentfulBlog.content ? data.contentfulBlog.content.childMarkdownRemark.html : null
 
   return (
     <Layout>

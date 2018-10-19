@@ -13,10 +13,12 @@ const BlogPost = ({node}) => {
 }
 const IndexPage = ({data}) => (
   <Layout>
-    <h1>Latest Tangents</h1>
-    <ul>
-      {data.allContentfulBlog.edges.map((edge) => <BlogPost node={edge.node} key={edge.node.id}/>)}
-    </ul>
+    <div style={{ margin: `3rem auto`, maxWidth: '42em' }}>
+      <h1>Latest Tangents</h1>
+      <ul>
+        {data.allContentfulBlog.edges.map((edge) => <BlogPost node={edge.node} key={edge.node.id}/>)}
+      </ul>
+    </div>
   </Layout>
 )
 
