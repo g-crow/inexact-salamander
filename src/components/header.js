@@ -31,6 +31,12 @@ const Header = ({ siteTitle }) => (
             justifyContent: 'space-around',
             float: 'right'
           }}>
+          <Link
+            to="/about"
+            style={{
+              color: 'white'
+            }}>
+            About</Link>
         </ul>
       </h1>
     </div>

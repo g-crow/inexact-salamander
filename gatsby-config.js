@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Genevieve Crow',
+    title: 'The Sidelong Pass',
   },
   plugins: [
     {
