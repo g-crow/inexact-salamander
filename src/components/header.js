@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const Header = ({ siteTitle }) => (
+const Header = ( ) => (
   <div
     style={{
-      background: '#666666',
       marginBottom: '1.45rem',
     }}
   >
@@ -15,30 +14,41 @@ const Header = ({ siteTitle }) => (
         padding: '1.7rem 1.0875rem',
       }}
     >
-      <h1 style={{ margin: 0 }}>
+    <ul
+      style={{
+        display: 'flex',
+        justifyContent: 'space-around',
+        float: 'right'
+      }}>
+      <Link
+        to="/about"
+        style={{
+          color: 'rgba(0,0,0,0.6)',
+          textDecoration: 'none',
+        }}
+      >
+        Profile
+      </Link>
+      <Link
+        to="/about"
+        style={{
+          color: 'rgba(0,0,0,0.6)'
+        }}>
+        Work</Link>
         <Link
           to="/"
           style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-        <ul
-          style={{
-            display: 'flex',
-            justifyContent: 'space-around',
-            float: 'right'
+            color: 'rgba(0,0,0,0.6)'
           }}>
-          <Link
-            to="/about"
-            style={{
-              color: 'white'
-            }}>
-            About</Link>
-        </ul>
-      </h1>
+          Insights</Link>
+        <Link
+          to="/about"
+          style={{
+            color: 'rgba(0,0,0,0.6)'
+          }}>
+          Contact</Link>
+      </ul>
+
     </div>
   </div>
 )
